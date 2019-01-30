@@ -39,7 +39,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>Sample App</title>
 </head>
 
 <body>
@@ -47,36 +47,40 @@
 
     // Wait for Cordova to load
     //
-    document.addEventListener("deviceready", onDeviceReady, false);
+    // document.addEventListener("deviceready", onDeviceReady, false);
 
     // Global InAppBrowser reference
-    var iabRef = null;
+    // var iabRef = null;
 
-    function iabLoadStart(event) {
-        alert(event.type + ' - ' + event.url);
+    // function iabLoadStart(event) {
+    //     alert(event.type + ' - ' + event.url);
+    // }
+
+    // function iabLoadStop(event) {
+    //     alert(event.type + ' - ' + event.url);
+    // }
+
+    // function iabClose(event) {
+    //      alert(event.type);
+    //      iabRef.removeEventListener('loadstart', iabLoadStart);
+    //      iabRef.removeEventListener('loadstop', iabLoadStop);
+    //      iabRef.removeEventListener('exit', iabClose);
+    // }
+
+    // // Cordova is ready
+    // //
+    // function onDeviceReady() {
+    //      iabRef = window.open('http://203.193.173.125/profile_frames/', '_blank', 'location=yes');
+    //      iabRef.addEventListener('loadstart', iabLoadStart);
+    //      iabRef.addEventListener('loadstop', iabLoadStop);
+    //      iabRef.addEventListener('exit', iabClose);
+    // }
+    function openApp(){
+        window.open('http://203.193.173.125/profile_frames/', '_blank', 'location=yes');
     }
-
-    function iabLoadStop(event) {
-        alert(event.type + ' - ' + event.url);
-    }
-
-    function iabClose(event) {
-         alert(event.type);
-         iabRef.removeEventListener('loadstart', iabLoadStart);
-         iabRef.removeEventListener('loadstop', iabLoadStop);
-         iabRef.removeEventListener('exit', iabClose);
-    }
-
-    // Cordova is ready
-    //
-    function onDeviceReady() {
-         iabRef = window.open('http://203.193.173.125/profile_frames/', '_blank', 'location=yes');
-         iabRef.addEventListener('loadstart', iabLoadStart);
-         iabRef.addEventListener('loadstop', iabLoadStop);
-         iabRef.addEventListener('exit', iabClose);
-    }
-
     </script>
+    <h3>Sample Code</h3>
+    <button type="button" onclick="openApp()">Click</button>
 </body>
 
 </html>
