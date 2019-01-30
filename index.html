@@ -40,47 +40,24 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Sample App</title>
+    <style>
+     
+     body {width:100%;height:100%;margin:0;overflow:hidden;background-
+     color:#252525;}
+     #my_iframe{
+      border: 0px;
+      height: 100vh;
+      width: 100%;
+      }
+    </style>
+
 </head>
 
+
 <body>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for Cordova to load
-    //
-    // document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Global InAppBrowser reference
-    // var iabRef = null;
-
-    // function iabLoadStart(event) {
-    //     alert(event.type + ' - ' + event.url);
-    // }
-
-    // function iabLoadStop(event) {
-    //     alert(event.type + ' - ' + event.url);
-    // }
-
-    // function iabClose(event) {
-    //      alert(event.type);
-    //      iabRef.removeEventListener('loadstart', iabLoadStart);
-    //      iabRef.removeEventListener('loadstop', iabLoadStop);
-    //      iabRef.removeEventListener('exit', iabClose);
-    // }
-
-    // // Cordova is ready
-    // //
-    // function onDeviceReady() {
-    //      iabRef = window.open('http://203.193.173.125/profile_frames/', '_blank', 'location=yes');
-    //      iabRef.addEventListener('loadstart', iabLoadStart);
-    //      iabRef.addEventListener('loadstop', iabLoadStop);
-    //      iabRef.addEventListener('exit', iabClose);
-    // }
-    function openApp(){
-        window.open('http://203.193.173.125/profile_frames/', '_blank', 'location=yes');
-    }
-    </script>
-    <h3>Sample Code</h3>
-    <button type="button" onclick="openApp()">Click</button>
+<iframe src="http://203.193.173.125/profile_frames/" id="my_iframe" frameborder="0" width="100%" height="100%" >
+</iframe> 
+<h1>Testing</h1>  
 </body>
 
 </html>
